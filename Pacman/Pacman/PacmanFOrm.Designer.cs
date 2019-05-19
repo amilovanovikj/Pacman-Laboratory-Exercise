@@ -65,7 +65,7 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.textBox1);
             this.Name = "PacmanForm";
-            this.Text = "Form1";
+            this.Text = "Pacman";
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.PacmanForm_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PacmanForm_KeyDown);
             this.ResumeLayout(false);

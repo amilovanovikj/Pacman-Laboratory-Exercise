@@ -17,6 +17,7 @@ namespace Pacman
         Image foodImage;
         List<Prepreka> prepreki;
         static readonly int TIMER_INTERVAL = 200;
+        static readonly int BR_PREPREKI = 8;
         public static int WORLD_WIDTH = 15;
         public static int WORLD_HEIGHT = 10;
         bool[][] foodWorld;
@@ -46,7 +47,7 @@ namespace Pacman
             }
             GenerateWalls();
             progressBar1.Minimum = 0;
-            progressBar1.Maximum = WORLD_HEIGHT * WORLD_WIDTH - 24;
+            progressBar1.Maximum = WORLD_HEIGHT * WORLD_WIDTH - 3 * BR_PREPREKI;
             progressBar1.Step = 1;
             progressBar1.Value = 0;
             timer.Start();
@@ -56,7 +57,7 @@ namespace Pacman
         {
             Random rand = new Random();
             prepreki = new List<Prepreka>();
-            for(int i = 0; i < 8; i++)
+            for(int i = 0; i < BR_PREPREKI; i++)
             {
                 int x = rand.Next(WORLD_WIDTH);
                 int y = rand.Next(WORLD_HEIGHT - 2);
